@@ -52,14 +52,14 @@ for report in get_quarterly_reports:
     report.print_report()
 
 
-def new_employee(f_name, l_name, salary, date_of_birth, hired_since, shift):
-    f_name = input("Enter employee first name(s) : ")
-    l_name = input("Enter employee last name(s) : ")
-    salary = input("Enter employee hourly rate : $")
-    date_of_birth = input("Enter employee birthdate : ")
-    hired_since = input("Enter employee first day of work : ")
-    job_title = input("Please specify the title of the employee: ")
-    CustomJobTitle(f_name, l_name, salary, date_of_birth, hired_since, shift)
-    shift = CustomShift()
-    return employee_list.append(new_employee())
+f_name = input("Enter employee first name(s) : ")
+l_name = input("Enter employee last name(s) : ")
+salary = input("Enter employee hourly rate : $")
+date_of_birth = input("Enter employee birthdate : ")
+hired_since = input("Enter employee first day of work : ")
+
+# Should be CustomJobTitle from input
+job_title = input("Please specify the title of the employee: ")
+# CustomJobTitle(f_name, l_name, salary, date_of_birth, hired_since, shift)
+shift = CustomShift()
 
