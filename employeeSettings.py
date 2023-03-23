@@ -47,4 +47,5 @@ class Pharmacist(EmployeeProfile):
 
 
 class CustomJobTitle(EmployeeProfile):
-    job_title = input("Please specify the title of the employee: ")
+    def addJobTitle(self, title):
+        self.job_title = title

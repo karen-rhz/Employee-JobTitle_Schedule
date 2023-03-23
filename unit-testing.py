@@ -3,7 +3,8 @@
 # Then this followong code will run
 
 import unittest
-from employeeSettings import EmployeeProfile
+from employeeSettings import EmployeeProfile, CustomJobTitle
+
 
 
 # Each test class need to begin by "Test"
@@ -20,3 +21,16 @@ class TestEmployee(unittest.TestCase):
     #     employee = EmployeeProfile("", "", 2000, None, None, None)
     #     employee.raise_salary(300)
     #     self.assertEqual(employee.salary, 2300)
+
+class TestCustomJobTitleEmployee(unittest.TestCase):
+    def test_Custom_Job_Title(self):
+        employee = CustomJobTitle(None, None, 0, None, None, None)
+        employee.addJobTitle("Consultant")
+        self.assertEqual(employee.job_title, "Consultant")
+
+    def test_Failed_Custom_Job_Title(self):
+        employee = CustomJobTitle(None, None, 0, None, None, None)
+        employee.addJobTitle("Assistant Manager")
+        self.assertNotEqual(employee.job_title, "Manager")
+
+unittest.main()

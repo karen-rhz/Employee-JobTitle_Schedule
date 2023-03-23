@@ -58,8 +58,20 @@ salary = input("Enter employee hourly rate : $")
 date_of_birth = input("Enter employee birthdate : ")
 hired_since = input("Enter employee first day of work : ")
 
-# Should be CustomJobTitle from input
 job_title = input("Please specify the title of the employee: ")
-# CustomJobTitle(f_name, l_name, salary, date_of_birth, hired_since, shift)
+
+
+"""
+To instantiate a custom job title use
+
+CustomJobTitle(f_name, l_name, 1, date_of_birth, hired_since, MorningShift()).addJobTitle(job_title)
+
+"""
+
 shift = CustomShift()
+
+
+
+
+
 
